@@ -1,7 +1,7 @@
 import torch
 
 def f(x):
-    return torch.sin(x[:,0])*torch.cos(x[:,1])+torch.sin(0.5*x[:,0])*torch.cos(0.5*x[:,1])
+    return torch.sin(x[0])*torch.cos(x[1])+torch.sin(0.5*x[0])*torch.cos(0.5*x[1])
 
 def gradient(x):
   grad = torch.zeros_like(x)

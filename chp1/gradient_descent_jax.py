@@ -3,7 +3,7 @@ from jax import random
 from jax import vmap
 
 def f(x):
-    return jnp.sin(x[:,0])*jnp.cos(x[:,1])+jnp.sin(0.5*x[:,0])*jnp.cos(0.5*x[:,1])
+    return jnp.sin(x[0])*jnp.cos(x[1])+jnp.sin(0.5*x[0])*jnp.cos(0.5*x[1])
 
 def gradient(x):
   grad = jnp.zeros_like(x)
